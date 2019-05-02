@@ -13,35 +13,11 @@ if a.isdigit():
         url= 'https://newsapi.org/v2/top-headlines?country=id&category='+dicteng[a]+'&apiKey='+apikey
         text='\nBerikut adalah top 5 berita Indonesia bidang '+dictindo[a]+' : \n'
 
-        if a==1:
-            data=requests.get(url)
-            print(text)
-            for i in range(0,5):
-                print((i+1),'-',data.json()['articles'][i]['title'])
-                    
-        elif a==2:
-            data=requests.get(url)
-            print(text)
-            for i in range(0,5):
-                print((i+1),'-',data.json()['articles'][i]['title'])
-
-        elif a==3:
-            data=requests.get(url)
-            print(text)
-            for i in range(0,5):
-                print((i+1),'-',data.json()['articles'][i]['title'])
-            
-        elif a==4:
-            data=requests.get(url)
-            print(text)
-            for i in range(0,5):
-                print((i+1),'-',data.json()['articles'][i]['title'])
-
-        else:
-            data=requests.get(url)
-            print(text)
-            for i in range(0,5):
-                print((i+1),'-',data.json()['articles'][i]['title'])
+        data=requests.get(url)
+        print(text)
+        for i in range(0,5):
+            print((i+1),'-',data.json()['articles'][i]['title'])         
+        
     else:
         print('Maaf pilihan yang anda input tidak tersedia')
 else:
